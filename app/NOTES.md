@@ -1,5 +1,7 @@
 ### project file system structure
 
+Inspired by the unix file system structure
+
 | directory     | description                                                |
 |---------------|------------------------------------------------------------|
 | app/          | root app directory, should not be accessed by normal users |
@@ -19,10 +21,21 @@
 
 ### <a name="component"></a>component file system structure
 
-**TODO:** structure bin/ directory
+**TODO:** re-structure bin/ directory
 
-| directory     | description                                                |
-|---------------|------------------------------------------------------------|
-| bin/          | code base dir                                              |
-| etc/          | configuration                                              |
-| doc/          | documentation                                              |
+| directory      | description                                         |
+|----------------|-----------------------------------------------------|
+| bin/           | code base dir                                       |
+| bin/controller | handles user input to manipulate data               |
+| bin/helper     | utility functions                                   |
+| bin/model      | data models, loaded by files in bin/res             |
+| bin/res        | database manipulation                               |
+| bin/route      | routing for express and angular (->move to config?) |
+| bin/service    | combines above methods to provide to components ?!  |
+| etc/           | configuration                                       |
+| doc/           | documentation                                       |
+| srv/           | files that are served to the user                   |
+| srv/css        | css files                                           |
+| srv/html       | html files                                          |
+| srv/js         | js files                                            |
+| srv/less       | less files                                          |
