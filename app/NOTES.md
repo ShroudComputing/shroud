@@ -37,5 +37,50 @@ Inspired by the unix file system structure
 | srv/           | files that are served to the user                   |
 | srv/css        | css files                                           |
 | srv/html       | html files                                          |
+| srv/img        | image files                                         |
 | srv/js         | js files                                            |
 | srv/less       | less files                                          |
+
+## Code patterns
+
+##### Singleton
+
+    var internals = {};
+
+    internals.Singleton = function () {
+
+    };
+
+    internals.Singleton.prototype.fn = function () {
+
+    };
+
+    module.exports = exports = new internals.Singleton();
+
+##### Class
+
+    var internals = {};
+
+    internals.Class = function() {
+
+    };
+
+    internals.Class.prototype.fn = function() {
+
+    };
+
+    module.exports = exports = Class;
+
+##### Functions
+
+    var internals = {};
+
+    internals.fn = function() {
+
+    };
+
+    internals.fn2 = function() {
+
+    };
+
+    module.exports = exports = internals;
