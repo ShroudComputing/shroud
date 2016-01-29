@@ -49,11 +49,11 @@ Inspired by the unix file system structure
 
     var internals = {};
 
-    internals.Singleton = function () {
+    internals.Singleton = function() {
 
     };
 
-    internals.Singleton.prototype.fn = function () {
+    internals.Singleton.prototype.fn = function() {
 
     };
 
