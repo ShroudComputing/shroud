@@ -26,7 +26,6 @@
     "cron": "^1.1.0",
     "deepcopy": "^0.6.1",
     "express": "^4.13.4",
-    "kontainer-di": "^0.9.8",
     "less": "^2.5.3",
     "mongoose": "^4.3.7",
     "nconf": "^0.8.2",

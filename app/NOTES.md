@@ -1,3 +1,5 @@
+## File structure
+
 ### project file system structure
 
 Inspired by the unix file system structure
@@ -84,3 +86,10 @@ Inspired by the unix file system structure
     };
 
     module.exports = exports = internals;
+
+## Dependency Injection
+
+* split at ':'
+* name[0] => component
+* name[1] => type (helper, controller, ...)
+* join name[2...n] with ':' => module name
