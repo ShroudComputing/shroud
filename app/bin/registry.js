@@ -1,4 +1,4 @@
-var internals = {};
+const internals = {};
 
 internals.Registry = function () {
   this.clear();

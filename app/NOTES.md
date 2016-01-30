@@ -47,7 +47,7 @@ Inspired by the unix file system structure
 
 ##### Singleton
 
-    var internals = {};
+    const internals = {};
 
     internals.Singleton = function() {
 
@@ -61,7 +61,7 @@ Inspired by the unix file system structure
 
 ##### Class
 
-    var internals = {};
+    const internals = {};
 
     internals.Class = function() {
 
@@ -75,7 +75,7 @@ Inspired by the unix file system structure
 
 ##### Functions
 
-    var internals = {};
+    const internals = {};
 
     internals.fn = function() {
 
