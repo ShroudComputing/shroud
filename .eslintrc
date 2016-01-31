@@ -45,5 +45,8 @@
     "browser": true,
     "node": true
   },
+  "globals": {
+    "__shroud": false
+  },
   "extends": "eslint:recommended"
 }

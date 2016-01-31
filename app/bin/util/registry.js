@@ -24,7 +24,7 @@ internals.Registry.prototype.add = function(name, dependencies, reference, alias
     component.factory = reference;
   } else {
     if (dependencies.length > 0) {
-      throw new Error('Component ' + name + ' registered with dependencies without factory')
+      throw new Error('Component ' + name + ' registered with dependencies without factory');
     }
     component.instance = reference;
   }
@@ -44,7 +44,7 @@ internals.Registry.prototype.get = function(name) {
   }
   if (!component.instance) {
     var dependencies = this.getDependencies(component);
-    component.instance = component.factory.apply(null, dependencies)
+    component.instance = component.factory.apply(null, dependencies);
   }
   return component.instance;
 };
