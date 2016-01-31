@@ -6,7 +6,7 @@ internals.Registry = function () {
 
 internals.Registry.prototype.add = function(name, dependencies, reference) {
   if (this.components[name] !== undefined) {
-    throw new Error('Component ' + component + ' is already registered. Use swap() instead.');
+    throw new Error('Component ' + name + ' is already registered. Use swap() instead.');
   }
   var component = {
     name: name,
