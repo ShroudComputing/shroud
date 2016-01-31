@@ -11,6 +11,7 @@ const internals = {};
 
 internals.App = function() {
   EventEmitter.call(this);
+  ComponentRegistry.call(this);
 };
 
 util.inherits(internals.App, EventEmitter);
