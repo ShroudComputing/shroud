@@ -11,7 +11,7 @@
     "start": "node app.js"
   },
   "author": "Leo \"PostCrafter\" Friedrichs <shroud@postcrafter.de> (http://postcrafter.de)",
-  "license": "AGPL",
+  "license": "AGPL-3.0",
   "bugs": {
     "url": "https://github.com/ShroudComputing/shroud/issues"
   },
