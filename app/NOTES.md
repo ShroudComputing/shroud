@@ -71,7 +71,7 @@ Inspired by the unix file system structure
 
     };
 
-    module.exports = exports = Class;
+    module.exports = exports = internals.Class;
 
 ##### Functions
 
