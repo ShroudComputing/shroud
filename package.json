@@ -21,6 +21,7 @@
     "autoprefixer": "^6.3.1",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.14.2",
+    "cli-commands": "git+https://github.com/ShroudComputing/cli-commands.git",
     "colors": "^1.1.2",
     "cookie-parser": "^1.4.1",
     "cron": "^1.1.0",
