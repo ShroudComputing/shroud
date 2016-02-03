@@ -1,10 +1,9 @@
-const path = require('path');
 const util = require('util');
 
-global.__shroud = path.join(__dirname, 'bin') + path.sep;
+global.__shroud = require('./globals');
 
-const App = require(path.join(__shroud, 'app.js'));
-const Container = require(__shroud + 'util/container.js');
+const App = require(__shroud.require('app.js'));
+const Container = require(__shroud.require('util/container.js'));
 
 const internals = {};
 
