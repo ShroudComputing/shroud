@@ -2,7 +2,7 @@
   "name": "shroud",
   "version": "0.1.0",
   "description": "A component based CMS built with NodeJS",
-  "main": "app/index.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/ShroudComputing/shroud.git"

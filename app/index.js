@@ -1,24 +1,29 @@
 const path = require('path');
 const util = require('util');
 
-const EventEmitter = require('events').EventEmitter;
-
 global.__shroud = path.join(__dirname, 'bin') + path.sep;
 
-const ComponentRegistry = require(__shroud + 'component/registry.js');
+const App = require(path.join(__shroud, 'app.js'));
+const Container = require(__shroud + 'util/container.js');
 
 const internals = {};
 
-internals.App = function() {
-  EventEmitter.call(this);
-  ComponentRegistry.call(this);
+internals.Shroud = function() {
+  Container.call(this);
 };
 
-util.inherits(internals.App, EventEmitter);
-util.inherits(internals.App, ComponentRegistry);
+util.inherits(internals.Shroud, Container);
 
-internals.App.prototype.init = function() {
-
+internals.Shroud.prototype.init = function() {
+  this.app();
 };
 
-module.exports = exports = new internals.App();
+internals.Shroud.prototype.app = function() {
+  if (!this.hasData('app')) {
+    // @todo: remove return
+    return this.setData('app', new App());
+  }
+  return this.getData('app');
+};
+
+module.exports = exports = new internals.Shroud();
