@@ -19,8 +19,7 @@ internals.Shroud.prototype.init = function() {
 
 internals.Shroud.prototype.app = function() {
   if (!this.hasData('app')) {
-    // @todo: remove return
-    return this.setData('app', new App());
+    this.setData('app', new App());
   }
   return this.getData('app');
 };
