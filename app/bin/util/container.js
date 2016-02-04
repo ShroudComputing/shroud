@@ -54,8 +54,10 @@ internals.Container.prototype.getData = function(key, defaultData) {
     return data;
   case 'string':
     return this.hasData(key) ? this._data[key] : defaultData;
+  case 'undefined':
+    return this._data;
   default:
-    throw new Error('Invalid key type. Must be of type array or string');
+    throw new Error('Invalid key type. Must be of type array, string or undefined');
   }
 };
 
