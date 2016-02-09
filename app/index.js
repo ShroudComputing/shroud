@@ -1,6 +1,6 @@
 const util = require('util');
 
-global.__shroud = require('./globals');
+global.__shroud = require('./globals.js');
 
 const App = require(__shroud.require('app.js'));
 const Container = require(__shroud.require('util/container.js'));
