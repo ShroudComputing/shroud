@@ -5,7 +5,8 @@ const internals = {};
 
 internals.logDir = path.join(__shroud.path.base, 'var', 'log');
 
-internals.levels = {
+internals.config = {};
+internals.config.levels = {
   error: 0,
   warn: 1,
   info: 2,
@@ -14,20 +15,22 @@ internals.levels = {
   trace: 5
 };
 
-internals.colors = {
+internals.config.colors = {
   error: 'red',
   warn: 'yellow',
   info: 'green',
   verbose: 'blue',
-  debug: 'blue',
-  trace: 'white'
+  debug: 'magenta', // @todo: Unable to colorize debug?
+  trace: 'gray'
 };
+winston.config.shroud = internals.config;
 
 internals.console = new winston.transports.Console({
   name: 'console',
   level: 'trace', // @todo: Configurable
   handleExceptions: true,
   colorize: true,
+  colors: internals.config.colors,
   timestamp: function() {
     return new Date().toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, '$1');
   },
@@ -35,16 +38,17 @@ internals.console = new winston.transports.Console({
     var prefix =  '[' + options.level.toUpperCase() + ' ' + options.timestamp() + '] ';
     var message = (undefined !== options.message ? options.message : '');
     var meta = (options.meta && Object.keys(options.meta).length ? '\n\t'+ JSON.stringify(options.meta) : '' );
-    return prefix + message + meta;
+    var output = prefix + message + meta;
+    if (!options.json && options.colorize) {
+      output = winston.config.colorize(options.level, output);
+    }
+    return output;
   }
 });
 
-// @todo: Make it actually work
-winston.addColors(internals.colors);
-
 internals.logger = new winston.Logger({
-  levels : internals.levels,
-  colors: internals.colors,
+  levels : internals.config.levels,
+  colors: internals.config.colors,
   transports: [
     internals.console
   ]
@@ -62,6 +66,5 @@ internals.logger.add(winston.transports.File, {
   level: 'info',
   filename: path.join(internals.logDir, 'system.log')
 });
-
 
 module.exports = exports = internals.logger;
