@@ -38,7 +38,7 @@ internals.createSymlink = function(file) {
   console.log(path.basename(file));
   fs.symlink(
     path.join(file),
-    path.join(internals.root, 'etc', path.basename(file)),
+    path.join(internals.root, 'node_modules', path.basename(file)),
     'dir',
     function(err) {
       if (err) {
