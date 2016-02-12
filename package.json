@@ -28,6 +28,7 @@
     "deepcopy": "^0.6.1",
     "express": "^4.13.4",
     "less": "^2.5.3",
+    "log4js": "^0.6.31",
     "mongoose": "^4.3.7",
     "nconf": "^0.8.2",
     "passport": "^0.3.2",
