@@ -1,14 +1,20 @@
 #! /usr/bin/env node
-const fs = require('fs');
-const path = require('path');
+'use strict';
 
-const internals = {};
+var fs = require('fs');
+var path = require('path');
+
+var util = require('util');
+var childProcess = require('child_process');
+
+
+var internals = {};
 
 internals.root = path.dirname(__dirname);
 
 // @todo: symlink all directories from ~/lib/ and ~/opt/ to ~/node_modules/
 
-internals.symlinkDir = function(directory) {
+internals.installModules = function(directory) {
   fs.readdir(directory, function(err, files) {
     if (err) {
       throw err;
@@ -29,23 +35,30 @@ internals.checkFile = function(file) {
       throw err;
     }
     if (stats.isDirectory()) {
-      internals.createSymlink(file);
+      internals.installModule(file);
     }
   });
 };
 
-internals.createSymlink = function(file) {
-  console.log(path.basename(file));
+internals.installModule = function(file) {
+  childProcess.exec('npm install file:' + file, function(err, stdout, stderr) {
+    if (err) {
+      throw err;
+    }
+  });
+  // doesn't seem to work on USB flash drives
+  /*
   fs.symlink(
     path.join(file),
     path.join(internals.root, 'node_modules', path.basename(file)),
     'dir',
     function(err) {
       if (err) {
-        throw err;
       }
     }
   );
+  */
 };
 
-internals.symlinkDir(path.join(internals.root, 'lib'));
+internals.installModules(path.join(internals.root, 'lib'));
+internals.installModules(path.join(internals.root, 'opt'));
