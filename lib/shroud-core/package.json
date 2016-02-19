@@ -1,0 +1,16 @@
+{
+  "name": "shroud-core",
+  "version": "0.1.0",
+  "description": "The core of shroud",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ShroudComputing/shroud.git"
+  },
+  "author": "Leo \"PostCrafter\" Friedrichs <contact@postcrafter.de> (http://postcrafter.de)",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ShroudComputing/shroud/issues"
+  },
+  "dependencies": {}
+}

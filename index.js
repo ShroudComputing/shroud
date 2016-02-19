@@ -1,3 +1,3 @@
-var shroud = require('./app/index.js');
+'use strict';
 
-shroud.init();
+exports = module.exports = require('./lib/index.js');

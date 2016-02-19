@@ -1,3 +1,3 @@
-#! /usr/bin/env node
+'use strict';
 
-// var args = process.argv.slice(2);
+require('shroud-cli')(process.args);
