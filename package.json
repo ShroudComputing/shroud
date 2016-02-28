@@ -8,9 +8,9 @@
     "url": "https://github.com/ShroudComputing/shroud.git"
   },
   "scripts": {
-    "prestart": "npm install shroud-cli && npm install shroud-core",
+    "prestart": "",
     "start": "node index.js",
-    "postinstall": "node bin/shroud.js install"
+    "postinstall": "npm install ./lib/shroud-cli && npm install ./lib/shroud-core && node bin/index.js install"
   },
   "author": "Leo \"PostCrafter\" Friedrichs <contact@postcrafter.de> (http://postcrafter.de)",
   "license": "AGPL-3.0",
@@ -36,8 +36,6 @@
     "passport-local": "^1.0.0",
     "prompt": "^1.0.0",
     "serve-favicon": "^2.3.0",
-    "shroud-cli": "./lib/shroud-cli",
-    "shroud-core": "./lib/shroud-core",
     "socket.io": "^1.4.5",
     "winston": "^2.1.1",
     "xtend": "^4.0.1"
