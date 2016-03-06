@@ -1,3 +1,3 @@
 'use strict';
 
-require('shroud-cli')(process.args);
+var shroud = require('../lib/index.js');

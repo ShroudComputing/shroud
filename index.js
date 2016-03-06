@@ -1,3 +1,5 @@
 'use strict';
 
-exports = module.exports = require('./lib/index.js');
+var shroud = require('./lib/index.js');
+
+exports = module.exports = shroud;

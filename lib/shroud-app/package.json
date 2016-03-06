@@ -1,7 +1,7 @@
 {
-  "name": "shroud-core",
+  "name": "shroud-app",
   "version": "0.1.0",
-  "description": "The core of shroud",
+  "description": "The shroud application",
   "main": "index.js",
   "repository": {
     "type": "git",

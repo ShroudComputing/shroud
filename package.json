@@ -8,9 +8,9 @@
     "url": "https://github.com/ShroudComputing/shroud.git"
   },
   "scripts": {
-    "prestart": "",
-    "start": "node index.js",
-    "postinstall": "npm install ./lib/shroud-cli && npm install ./lib/shroud-core && node bin/index.js install"
+    "postinstall": "node bin/install.js && node bin/index.js shroud:install",
+    "prestart": "node bin/install.js",
+    "start": "node index.js shroud:start"
   },
   "author": "Leo \"PostCrafter\" Friedrichs <contact@postcrafter.de> (http://postcrafter.de)",
   "license": "AGPL-3.0",

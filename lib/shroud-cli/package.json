@@ -2,7 +2,7 @@
   "name": "shroud-cli",
   "version": "0.1.0",
   "description": "cli utility for shroud",
-  "main": "bin/index.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/ShroudComputing/shroud.git"
