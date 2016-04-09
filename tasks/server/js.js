@@ -4,8 +4,9 @@ const gutil = require('gulp-util');
 
 const babel = require('gulp-babel');
 
+// @todo: Need to fix output paths
+
 module.exports = function(src, options) {
-  console.log('server/js');
   return src
   .pipe(options.transpile
     ? babel({
