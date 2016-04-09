@@ -7,7 +7,7 @@
       "!plugins/**/client/css/*.min.css"
     ],
     "options": {
-      "minify": false,
+      "minify": true,
       "watch": true
     }
   },
@@ -19,7 +19,7 @@
       "!plugins/**/client/js/*.min.js"
     ],
     "options": {
-      "minify": false,
+      "minify": true,
       "watch": true
     }
   },

@@ -1,0 +1,8 @@
+{
+  "name": "example",
+  "main": "index.js",
+  "dependencies": [
+    "shroud:core",
+    "shroud:config"
+  ]
+}
