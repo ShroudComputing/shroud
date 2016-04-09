@@ -9,7 +9,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified yet\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "watch": "gulp watch"
   },
   "author": "Leo \"PostCrafter\" Friedrichs <contact@postcrafter.de> (http://postcrafter.de)",
   "license": "AGPL-3.0",
@@ -23,5 +24,16 @@
     "mongoose": "^4.4.11",
     "multer": "^1.1.0",
     "nconf": "^0.8.4"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-filter": "^4.0.0",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-less": "^3.0.5",
+    "gulp-minify": "0.0.7",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-util": "^3.0.7"
   }
 }

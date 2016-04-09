@@ -1,0 +1,49 @@
+{
+  "client:css": {
+    "dest": "plugins",
+    "require": "./tasks/client/css.js",
+    "src": [
+      "plugins/**/client/css/*.css",
+      "!plugins/**/client/css/*.min.css"
+    ],
+    "options": {
+      "minify": false,
+      "watch": true
+    }
+  },
+  "client:js": {
+    "dest": "plugins",
+    "require": "./tasks/client/js.js",
+    "src": [
+      "plugins/**/client/js/*.js",
+      "!plugins/**/client/js/*.min.js"
+    ],
+    "options": {
+      "minify": false,
+      "watch": true
+    }
+  },
+  "client:less": {
+    "dest": "plugins",
+    "require": "./tasks/client/less.js",
+    "src": [
+      "plugins/**/client/less/*.less"
+    ],
+    "options": {
+      "watch": true
+    }
+  },
+  "server:js": {
+    "dest": "run",
+    "require": "./tasks/server/js.js",
+    "src": [
+      "lib/**/*.js",
+      "plugins/**/*.js",
+      "!plugins/**/client/js/*.js"
+    ],
+    "options": {
+      "transpile": false,
+      "watch": true
+    }
+  }
+}
