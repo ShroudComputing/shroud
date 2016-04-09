@@ -34,6 +34,7 @@
     }
   },
   "server:js": {
+    "disable": true,
     "dest": "run",
     "require": "./tasks/server/js.js",
     "src": [

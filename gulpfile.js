@@ -17,6 +17,9 @@ Object.keys(tasks).forEach(function(name) {
       throw new Error(util.format('Task %s doesn\'t have required property %s.', name, key));
     }
   });
+  if (task.disable) {
+    return;
+  }
   task.depends = task.depends || [];
   task.options = task.options || {};
   const exec = require(task.require);
