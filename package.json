@@ -1,0 +1,27 @@
+{
+  "name": "shroud",
+  "version": "0.1.0",
+  "description": "A component based cms built with NodeJS",
+  "main": "lib/shroud.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ShroudComputing/shroud.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified yet\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Leo \"PostCrafter\" Friedrichs <contact@postcrafter.de> (http://postcrafter.de)",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ShroudComputing/shroud/issues"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "cookie-parser": "^1.4.1",
+    "express": "^4.13.3",
+    "mongoose": "^4.4.11",
+    "multer": "^1.1.0",
+    "nconf": "^0.8.4"
+  }
+}
