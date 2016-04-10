@@ -4,36 +4,43 @@ const util = require('util');
 
 const gulp = require('gulp');
 
-const plumber = require('gulp-plumber');
+const server = require('gulp-develop-server');
 
 const tasks = require('./tasks.json');
 const watchTasks = [];
-const keys = ['dest', 'src', 'require'];
+const keys = ['type', 'require'];
+
+const types = {
+  stream: {
+    require: require('./tasks/stream.js'),
+    keys: ['dest', 'src', 'require']
+  },
+  task: {
+    require: require('./tasks/task.js'),
+    keys: ['require']
+  }
+};
 
 Object.keys(tasks).forEach(function(name) {
   const task = tasks[name];
-  keys.forEach(function(key) {
+  if (task.disable) {
+    return;
+  }
+  task.name = name;
+
+  const type = types[task.type];
+
+  type.keys.forEach(function(key) {
     if (!(key in task)) {
       throw new Error(util.format('Task %s doesn\'t have required property %s.', name, key));
     }
   });
-  if (task.disable) {
-    return;
-  }
-  task.depends = task.depends || [];
-  task.options = task.options || {};
-  const exec = require(task.require);
 
-  gulp.task(name, task.depends, function() {
-    const src = gulp.src(task.src)
-      .pipe(plumber());
-    return exec(src, task.options)
-      .pipe(gulp.dest(task.dest));
-  });
-  if (task.options.watch) {
-    watchTasks.push({
-      name: name,
-      src: task.src
+  const exec = require(task.require);
+  const watch = type.require(task, exec);
+  if (watch) {
+    watch.forEach(function (watchTask) {
+      watchTasks.push(watchTask);
     });
   }
 });
@@ -49,3 +56,21 @@ gulp.task(
     });
   }
 );
+
+//gulp.task('shroud:start', function() {
+//  server.listen({
+//    path: './index.js'
+//  });
+//});
+//
+//gulp.task('shroud:restart', function() {
+//  server.restart();
+//});
+//
+//gulp.task(
+//  'dev',
+//  ['watch', 'shroud:start'],
+//  function() {
+//    gulp.watch('lib/**/*.js', ['shroud:restart']);
+//  }
+//);

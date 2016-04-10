@@ -1,10 +1,11 @@
 {
   "client:css": {
     "dest": "plugins",
-    "require": "./tasks/client/css.js",
+    "type": "stream",
+    "require": "./tasks/stream/client/css.js",
     "src": [
-      "plugins/**/client/css/*.css",
-      "!plugins/**/client/css/*.min.css"
+      "plugins/**/stream/client/css/*.css",
+      "!plugins/**/stream/client/css/*.min.css"
     ],
     "options": {
       "minify": true,
@@ -13,10 +14,11 @@
   },
   "client:js": {
     "dest": "plugins",
-    "require": "./tasks/client/js.js",
+    "type": "stream",
+    "require": "./tasks/stream/client/js.js",
     "src": [
-      "plugins/**/client/js/*.js",
-      "!plugins/**/client/js/*.min.js"
+      "plugins/**/stream/client/js/*.js",
+      "!plugins/**/stream/client/js/*.min.js"
     ],
     "options": {
       "minify": true,
@@ -25,9 +27,10 @@
   },
   "client:less": {
     "dest": "plugins",
-    "require": "./tasks/client/less.js",
+    "type": "stream",
+    "require": "./tasks/stream/client/less.js",
     "src": [
-      "plugins/**/client/less/*.less"
+      "plugins/**/stream/client/less/*.less"
     ],
     "options": {
       "watch": true
@@ -36,15 +39,41 @@
   "server:js": {
     "disable": true,
     "dest": "run",
-    "require": "./tasks/server/js.js",
+    "type": "stream",
+    "require": "./tasks/stream/server/js.js",
     "src": [
       "lib/**/*.js",
       "plugins/**/*.js",
-      "!plugins/**/client/js/*.js"
+      "!plugins/**/stream/client/js/*.js"
     ],
     "options": {
       "transpile": false,
       "watch": true
     }
+  },
+  "dev": {
+    "type": "task",
+    "require": "./tasks/task/dev.js",
+    "src": "lib/**/*.js",
+    "depends": [
+      "watch",
+      "shroud:start"
+    ],
+    "options": {
+      "target": [
+        "shroud:restart"
+      ]
+    }
+  },
+  "shroud:start": {
+    "type": "task",
+    "require": "./tasks/task/start.js",
+    "options": {
+      "file": "index.js"
+    }
+  },
+  "shroud:restart": {
+    "type": "task",
+    "require": "./tasks/task/restart.js"
   }
 }
