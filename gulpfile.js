@@ -4,10 +4,11 @@ const gulp = require('gulp');
 
 const eslint = require('gulp-eslint');
 const server = require('gulp-develop-server');
+const todo = require('gulp-todo');
 
-const source = ['**/*.js','!node_modules/**'];
+const source = ['**/*.js','!node_modules/**', '!gulpfile.js'];
 
-gulp.task('dev', ['lint', 'server:start'], function() {
+gulp.task('dev', ['lint', 'doc', 'server:start'], function() {
   gulp.watch(source, ['lint', 'server:restart']);
 });
 
@@ -27,3 +28,11 @@ gulp.task('lint', function () {
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
 });
+
+gulp.task('todo', function() {
+  gulp.src(source)
+    .pipe(todo())
+    .pipe(gulp.dest('./doc'));
+});
+
+gulp.task('doc', ['todo']);
