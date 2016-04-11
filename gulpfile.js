@@ -56,21 +56,3 @@ gulp.task(
     });
   }
 );
-
-//gulp.task('shroud:start', function() {
-//  server.listen({
-//    path: './index.js'
-//  });
-//});
-//
-//gulp.task('shroud:restart', function() {
-//  server.restart();
-//});
-//
-//gulp.task(
-//  'dev',
-//  ['watch', 'shroud:start'],
-//  function() {
-//    gulp.watch('lib/**/*.js', ['shroud:restart']);
-//  }
-//);
