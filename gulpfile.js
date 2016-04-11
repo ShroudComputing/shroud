@@ -6,7 +6,7 @@ const eslint = require('gulp-eslint');
 const server = require('gulp-develop-server');
 const todo = require('gulp-todo');
 
-const source = ['**/*.js','!node_modules/**', '!gulpfile.js'];
+const source = ['**/*.js','!node_modules/**'];
 
 gulp.task('dev', ['lint', 'doc', 'server:start'], function() {
   gulp.watch(source, ['lint', 'server:restart']);
