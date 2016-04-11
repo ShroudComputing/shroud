@@ -2,6 +2,7 @@
   "name": "shroud",
   "version": "0.1.0",
   "description": "A content management system built with Node.js",
+  "homepage": "https://github.com/ShroudComputing/shroud/tree/sandbox/",
   "main": "lib/shroud.js",
   "repository": {
     "type": "git",

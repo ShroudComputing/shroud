@@ -1,5 +1,7 @@
 'use strict';
 
+// @todo update website in package.json when changing branch
+
 const nconf = require('nconf');
 
 const Shroud = require('./lib/shroud.js');
