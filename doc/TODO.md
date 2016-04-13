@@ -7,8 +7,6 @@
 |[lib/shroud.js](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/shroud.js)|[70](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/shroud.js#L70)|Improve reject reasons
 |[lib/shroud.js](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/shroud.js)|[99](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/shroud.js#L99)
 |[lib/classes/attribute.js](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/classes/attribute.js)|[9](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/classes/attribute.js#L9)
-|[lib/classes/model.js](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/classes/model.js)|[6](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/classes/model.js#L6)|Add method to add attributes to model
-|[lib/classes/model.js](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/classes/model.js)|[11](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/classes/model.js#L11)
 |[lib/classes/mongo.js](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/classes/mongo.js)|[18](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/classes/mongo.js#L18)|validate
 |[lib/skeletons/collection.js](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/skeletons/collection.js)|[6](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/skeletons/collection.js#L6)
 |[lib/skeletons/document.js](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/skeletons/document.js)|[6](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/skeletons/document.js#L6)
