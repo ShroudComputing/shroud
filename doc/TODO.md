@@ -2,11 +2,10 @@
 | Filename | line # | TODO
 |:------|:------:|:------
 |[index.js](https://github.com/ShroudComputing/shroud/tree/sandbox/index.js)|[3](https://github.com/ShroudComputing/shroud/tree/sandbox/index.js#L3)|update website in package.json when changing branch
-|[lib/shroud.js](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/shroud.js)|[18](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/shroud.js#L18)
-|[lib/shroud.js](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/shroud.js)|[39](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/shroud.js#L39)|validate
-|[lib/shroud.js](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/shroud.js)|[55](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/shroud.js#L55)|Add possibility to override of same type?
+|[lib/shroud.js](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/shroud.js)|[37](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/shroud.js#L37)|Add possibility to override of same type?
+|[lib/shroud.js](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/shroud.js)|[49](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/shroud.js#L49)
 |[lib/classes/attribute.js](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/classes/attribute.js)|[6](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/classes/attribute.js#L6)
-|[lib/classes/mongo.js](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/classes/mongo.js)|[16](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/classes/mongo.js#L16)|validate
+|[lib/classes/mongo.js](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/classes/mongo.js)|[18](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/classes/mongo.js#L18)|validate
 |[lib/skeletons/collection.js](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/skeletons/collection.js)|[6](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/skeletons/collection.js#L6)
 |[lib/skeletons/document.js](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/skeletons/document.js)|[6](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/skeletons/document.js#L6)
 |[lib/skeletons/filter.js](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/skeletons/filter.js)|[6](https://github.com/ShroudComputing/shroud/tree/sandbox/lib/skeletons/filter.js#L6)

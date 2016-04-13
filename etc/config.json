@@ -3,9 +3,7 @@
     "host": "localhost",
     "port": 27017,
     "database": "shroud",
-    "options": {
-      "user": "shroud",
-      "pass": "password"
-    }
+    "user": "shroud",
+    "pass": "password"
   }
 }
