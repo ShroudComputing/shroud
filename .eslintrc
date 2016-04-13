@@ -25,7 +25,10 @@
     "comma-style": 2,
     "indent": [
       2,
-      2
+      2,
+      {
+        "SwitchCase": 1
+      }
     ],
     "quotes": [
       2,
