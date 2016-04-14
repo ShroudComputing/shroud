@@ -19,7 +19,7 @@ gulp.task('dev', ['lint', 'doc', 'server:start'], function() {
 
 gulp.task('server:start', function() {
   server.listen({
-    path: 'index.js'
+    path: 'lib/index.js'
   });
 });
 

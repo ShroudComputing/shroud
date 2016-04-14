@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "description": "A content management system built with Node.js",
   "homepage": "https://github.com/ShroudComputing/shroud/tree/sandbox/",
-  "main": "lib/shroud.js",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/ShroudComputing/shroud.git"
   },
   "scripts": {
     "test": "./node_modules/.bin/mocha",
-    "start": "node index.js",
+    "start": "node ./lib/index.js",
     "watch": "./node_modules/.bin/gulp dev"
   },
   "author": "Leo \"PostCrafter\" Friedrichs <contact@postcrafter.de> (http://postcrafter.de)",
